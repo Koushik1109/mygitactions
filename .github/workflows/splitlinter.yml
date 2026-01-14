@@ -1,18 +1,10 @@
-name: Super-Linter
+name: Email Check Action
 
 on: push
 
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
       - name: 24ds3000006@ds.study.iitm.ac.in
         run: echo "Hello, world!"
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run Super-Linter
-        uses: github/super-linter@v4
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
